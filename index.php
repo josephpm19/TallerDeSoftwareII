@@ -7,6 +7,16 @@
     <title>Home</title>
 </head>
 <body>
-    
+    <header>
+        <div class="logo">
+            <img src="image.php" alt="Pisquerito" width="250px" height="200px">
+        </div>
+        <div id="search">
+        
+        </div>
+        <div id="cart-shopping">
+        
+        </div>
+    </header>
 </body>
 </html>
