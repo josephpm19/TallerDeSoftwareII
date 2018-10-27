@@ -41,12 +41,12 @@
             </textarea>
         </div>
         <div>
-            <label for="asunto">Numero de pedido: </label>
-            <input type="text" name="asunto">
+            <label for="pedido">Numero de pedido: </label>
+            <input type="text" name="pedido">
         </div>
         <div>
-            <label for="Comentario">Comentario: </label>
-            <textarea name="mensaje" rows="4" cols="50">
+            <label for="comentario">Comentario: </label>
+            <textarea name="comentario" rows="4" cols="50">
             </textarea>
         </div>
         <div>
