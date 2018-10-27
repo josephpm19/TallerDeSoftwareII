@@ -30,6 +30,6 @@
     </div> 
     
     <div id="copyr">
-        <p>© 2018 Copyright Pisquerito.com. All Rights Reserved.</p>
+        <p>© 2018 Copyright Elpisquerito.com. All Rights Reserved.</p>
     </div>   
 </div>

@@ -4,7 +4,7 @@
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Contactos</title>
+    <title>Contacto</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="css/estilo.css" />
     <script src="main.js"></script>
@@ -14,7 +14,7 @@
     <?php include 'partes/menu.php' ?>
 
     <main>
-        <h1>Contactos</h1>
+        <h1>Cont</h1>
 
         <p>Estimado <b><?php echo $_COOKIE["nombre"];?></b>  gracias por enviarnos su formulario</p>
     </main>

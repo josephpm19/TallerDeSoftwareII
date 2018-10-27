@@ -16,7 +16,7 @@
 	<?php include 'partes/header.php' ?>
 	<?php include 'partes/navegacion.php' ?>
     <main>
-        <h1>Contactos</h1>
+        <h1>Contáctenos</h1>
     <form action="contacto_procesar.php" method="post">
         <div>
             <label for="nombre">Nombre:</label>
@@ -35,12 +35,17 @@
             <?php } ?>
             >
         </div>
+		<div>
+            <label for="mensaje">:Telefono</label>
+            <textarea name="mensaje" rows="4" cols="50">
+            </textarea>
+        </div>
         <div>
-            <label for="asunto">Asunto: </label>
+            <label for="asunto">Numero de pedido: </label>
             <input type="text" name="asunto">
         </div>
         <div>
-            <label for="mensaje">Mensaje: </label>
+            <label for="Comentario">Comentario: </label>
             <textarea name="mensaje" rows="4" cols="50">
             </textarea>
         </div>
