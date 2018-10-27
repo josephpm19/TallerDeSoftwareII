@@ -1,0 +1,74 @@
+
+    body {
+        font-family: 'Nunito', sans-serif;
+        background-image: url('http://cdn.magdeleine.co/wp-content/uploads/2014/05/3jPYgeVCTWCMqjtb7Dqi_IMG_8251-1400x933.jpg');
+        background-repeat: no-repeat;
+        }
+    
+    
+        .login {
+        margin: 20px auto;
+        width: 300px;
+        }
+        .login-box {
+        background-color: #FFF;
+        padding: 20px;
+        border-radius: 15px
+        }
+        
+        .titulo {
+        text-align: center;
+        color: #777;
+        }
+        
+        .login-form {
+        text-align: center;
+        }
+        .fila {
+        margin-bottom: 10px;
+        }
+        
+        .fila input {
+        text-align: left;
+        background-color: #ECF0F1;
+        border: 2px solid transparent;
+        border-radius: 15px;
+        font-size: 16px;
+        font-weight: 200;
+        padding: 10px 0;
+        width: 250px;
+        transition: border .5s;
+        }
+        
+        .fila input:focus {
+        border: 2px solid #000000;
+        box-shadow: none;
+        }
+        
+        .btn-login {
+          border: 2px solid transparent;
+          background: #000000;
+          color: #ffffff;
+          font-size: 16px;
+          line-height: 25px;
+          padding: 10px 0;
+          text-decoration: none;
+          text-shadow: none;
+          border-radius: 15px;
+          box-shadow: none;
+          transition: 0.25s;
+          display: block;
+          width: 250px;
+          margin: 0 auto;
+        }
+        
+        .btn-login:hover {
+          background-color: rgb(94, 98, 100);
+        }
+        
+        .forgotpass {
+          font-size: 12px;
+          color: #444;
+          display: block;
+            margin-top: 12px;
+        }
