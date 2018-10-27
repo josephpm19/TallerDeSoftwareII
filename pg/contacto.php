@@ -15,7 +15,41 @@
 <body>
 	<?php include 'partes/header.php' ?>
 	<?php include 'partes/navegacion.php' ?>
-    <h1>Contáctenos</h1>
+    <main>
+        <h1>Contactos</h1>
+    <form action="contacto_procesar.php" method="post">
+        <div>
+            <label for="nombre">Nombre:</label>
+            <input type="text" name="nombre"
+
+            <?php  if (isset($_SESSION["nombre"])){?>
+                value="<?php echo $_SESSION["nombre"]?>"
+            <?php } ?>
+            >
+        </div>
+        <div>
+            <label for="correo">Correo: </label>
+            <input type="email" name="correo"
+            <?php  if (isset($_SESSION["correo"])){?>
+                value="<?php echo $_SESSION["correo"]?>"
+            <?php } ?>
+            >
+        </div>
+        <div>
+            <label for="asunto">Asunto: </label>
+            <input type="text" name="asunto">
+        </div>
+        <div>
+            <label for="mensaje">Mensaje: </label>
+            <textarea name="mensaje" rows="4" cols="50">
+            </textarea>
+        </div>
+        <div>
+            <button input="submit">Enviar</button>
+        </div>
+    </form>
+    </main>
+
 
     
     
