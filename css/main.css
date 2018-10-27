@@ -33,7 +33,7 @@ border: 2px solid black;
 }
 .search-box:hover>.search-txt{
 width:240px;
-transition: 0.8s; 
+transition: 0.2s; 
 }
 
 .search-box:hover>.search-bton{
