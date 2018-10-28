@@ -1,32 +1,32 @@
 
-    body {
-        font-family: 'Nunito', sans-serif;
-        background-image: url('http://cdn.magdeleine.co/wp-content/uploads/2014/05/3jPYgeVCTWCMqjtb7Dqi_IMG_8251-1400x933.jpg');
-        background-repeat: no-repeat;
-        }
+body {
+  font-family: 'Nunito', sans-serif;
+  background-image: url('http://cdn.magdeleine.co/wp-content/uploads/2014/05/3jPYgeVCTWCMqjtb7Dqi_IMG_8251-1400x933.jpg');
+  background-repeat: no-repeat;
+}
     
     
-        .login {
-        margin: 20px auto;
-        width: 300px;
-        }
-        .login-box {
-        background-color: #FFF;
-        padding: 20px;
-        border-radius: 15px
-        }
+.login {
+  margin: 20px auto;
+  width: 300px;
+}
+.login-box {
+  background-color: #FFF;
+  padding: 20px;
+  border-radius: 15px 
+}
         
-        .titulo {
-        text-align: center;
-        color: #777;
-        }
+.titulo {
+  text-align: center;
+  color: #777;
+  }
         
-        .login-form {
-        text-align: center;
-        }
-        .fila {
-        margin-bottom: 10px;
-        }
+.login-form {
+  text-align: center;
+}
+.fila {
+  margin-bottom: 10px;
+}
         
         .fila input {
         text-align: left;
@@ -72,3 +72,20 @@
           display: block;
             margin-top: 12px;
         }
+
+
+/* formulario de contacto*/
+
+
+#contacto{
+  margin: 20px 50px;
+  border:2px solid black;
+  width: 400px;
+  padding: 10px;
+}
+
+#contacto h1{
+  text-align: center;
+}
+
+
