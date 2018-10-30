@@ -6,12 +6,11 @@
     <div class="colum">
         <h3>Nuestras Políticas</h3>
         <ul>
-            <li> <a href="#"> Politicas de Envio</a> </li>
-            <li> <a href="#"> Politicas de Privacidad</a> </li>
-            <li> <a href="#"> Politicas de Devoluciones</a> </li>
-            <li> <a href="#"> Politicas de Envio</a> </li>
-            <li> <a href="#"> Politicas de Envio</a> </li>
-            <li> <a href="#"> Politicas de Envio</a> </li>
+            <li> <a href="politicas-de-envio.php"> Politicas de Envio</a> </li>
+            <li> <a href="politicas-de-privacidad.php"> Politicas de Privacidad</a> </li>
+            <li> <a href="cambios-y-devoluciones.php"> Politicas de Devoluciones</a> </li>
+            <li> <a href="terminos-y-condiciones.php"> Politicas de Envio</a> </li>
+
 
         </ul>
     </div>
