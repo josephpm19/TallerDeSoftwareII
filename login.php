@@ -23,7 +23,7 @@
 			<form action="login_proc.php" method="post">
 				<div class="login-form">
 					<div class="fila">
-							<input  type="text"  value="" placeholder="  User" id="usuario">
+							<input  type="text"  value="" placeholder="  Correo" id="correo">
 					</div>
 					<div class="fila">
 							<input type="password"  value="" placeholder="  Contraseña" id="password">
