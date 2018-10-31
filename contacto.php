@@ -60,21 +60,22 @@
         </div>
     </form>
 </div>
-
-<div id="googleMap" style="width:100%;height:400px;"></div>
+<div id="mapa">
+    <h2 style="display:block;">Ubícanos</h2>
+<div id="googleMap" style="width:100%;height:350px;border-radius:15px; "></div>
 
     <script>
     function myMap() {
     var mapProp= {
-        center:new google.maps.LatLng(51.508742,-0.120850),
-        zoom:5,
+        center:new google.maps.LatLng(-12.079414,-77.063486),
+        zoom:15,
     };
     var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
     }
     </script>
 
-    <script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY&callback=myMap"></script>
-
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYQXwV-LSQoHfCQDiVYQxkduiemHHbuck&callback=myMap"></script>
+</div>
 	<?php include 'partes/footer.php' ?>
 
 </body>

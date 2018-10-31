@@ -10,7 +10,8 @@ $password=$_POST["password"];
 $db = new PDO('mysql:host=localhost;dbname=pisquerito;charset=utf8', 'root', '');
 $stmt = $db->query("SELECT * FROM administrador WHERE email='$correo' AND pass='$password'");
 $usuarios = $stmt->fetchAll();
-
+/*print_r($usuarios);
+die();*/
 $validacion = false;
 
 if (count($usuarios) == 1) {

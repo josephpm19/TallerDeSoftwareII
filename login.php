@@ -23,10 +23,10 @@
 			<form action="login_proc.php" method="post">
 				<div class="login-form">
 					<div class="fila">
-							<input  type="text"  value="" placeholder="  Correo" id="correo">
+							<input  type="text"  value="" placeholder="  Correo" name="correo">
 					</div>
 					<div class="fila">
-							<input type="password"  value="" placeholder="  Contraseña" id="password">
+							<input type="password"  value="" placeholder="  Contraseña" name="password">
 					</div>
 					<button class="btn-login" type="submit">Iniciar Sesion</button>
 					<a class="forgotpass" href="#">Perdiste tu contraseña?</a>

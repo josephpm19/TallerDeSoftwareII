@@ -28,51 +28,51 @@ body {
 .fila {
   margin-bottom: 10px;
 }
+.fila input {
+  text-align: left;
+  background-color: #ECF0F1;
+  border: 2px solid transparent;
+  border-radius: 15px;
+  font-size: 16px;
+  font-weight: 200;
+  padding: 10px 0;
+  width: 250px;
+  transition: border .5s;
+  }
         
-        .fila input {
-        text-align: left;
-        background-color: #ECF0F1;
-        border: 2px solid transparent;
-        border-radius: 15px;
-        font-size: 16px;
-        font-weight: 200;
-        padding: 10px 0;
-        width: 250px;
-        transition: border .5s;
-        }
+.fila input:focus {
+  border: 2px solid #000000;
+  box-shadow: none;
+}
         
-        .fila input:focus {
-        border: 2px solid #000000;
-        box-shadow: none;
-        }
+.btn-login {
+  border: 2px solid transparent;
+  background: #000000;
+  color: #ffffff;
+  font-size: 16px;
+  line-height: 25px;
+  padding: 10px 0;
+  text-decoration: none;
+  text-shadow: none;
+  border-radius: 15px;
+  box-shadow: none;
+  transition: 0.25s;
+  display: block;
+  width: 250px;
+  margin: 0 auto;
+}
         
-        .btn-login {
-          border: 2px solid transparent;
-          background: #000000;
-          color: #ffffff;
-          font-size: 16px;
-          line-height: 25px;
-          padding: 10px 0;
-          text-decoration: none;
-          text-shadow: none;
-          border-radius: 15px;
-          box-shadow: none;
-          transition: 0.25s;
-          display: block;
-          width: 250px;
-          margin: 0 auto;
-        }
+.btn-login:hover {
+  background-color: rgb(94, 98, 100);
+}
         
-        .btn-login:hover {
-          background-color: rgb(94, 98, 100);
-        }
-        
-        .forgotpass {
-          font-size: 12px;
-          color: #444;
-          display: block;
-            margin-top: 12px;
-        }
+.forgotpass {
+  font-size: 12px;
+  color: #444;
+  display: block;
+  margin-top: 12px;
+  text-align: center;
+}
 
 
 /* formulario de contacto*/
@@ -82,12 +82,17 @@ body {
   margin: 20px 50px;
   border-radius: 15px;
   background-color: #FFF;
-  width: 400px;
+  width: 35%;
   padding: 10px;
+  float: left;
 }
 
 #contacto h1{
   text-align: center;
 }
-
+#mapa{
+  width: 55%;
+  display: flex;
+  margin: 20px;
+}
 
