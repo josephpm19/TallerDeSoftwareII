@@ -45,9 +45,20 @@
             <label for="pedido">Numero de pedido: </label>
             <input type="text" name="pedido">
         </div>
+        <div class="linea">
+					<label>Motivo:</label>
+				
+					<select name="motivo">
+						<option value="1">Sugerencia</option>
+						<option value="2">Reclamo</option>
+						<option value="3">Interes</option>
+						<option value="4">Otros</option>
+					</select>
+				</div>
+
         <div class="login-form">
-            <label for="comentario">Comentario: </label>
-            <textarea name="comentario" rows="4" cols="50">
+            <label for="mensaje">Mensaje </label>
+            <textarea name="mensaje" rows="4" cols="50">
             </textarea>
         </div>
         <div >
