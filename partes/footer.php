@@ -24,9 +24,9 @@
             <li> <a href="#"> <i class="fab fa-pinterest-square"></i></a> </li>
         </ul>
         <p>Become a member of Pisquerito and we'll keep you up-to-date with the latest products and offers.</p>
-        <input type="text" placeholder="Tu nombre" id="suscrinombre">
+        <input type="text" placeholder="Tu nombre" id="suscrinombre" maxlength="10" size="5">
         <input type="text" placeholder="Tu email" id="suscriemail"> 
-        <button type="submit">Suscribirse</button>
+        <button class="btn-sus" type="submit">Suscribirse</button>
     </div> 
     
     <div id="copyr">

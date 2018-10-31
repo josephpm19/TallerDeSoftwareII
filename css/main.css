@@ -34,7 +34,7 @@ border: 2px solid black;
 
 
 .search-bton{
-color:#4C3036;
+color:#FFF;
 float:right;
 width: 40px;
 height: 40px;
@@ -136,18 +136,26 @@ list-style-type: none;
 display: inline-block;
 }
 
+#footer .colum #redess .fab>.fa-facebook-square,.fa-instagram,.fa-twitter-square,.fa-youtube-square,.fa-pinterest-square{
+    font-size: 40px;
+}
 
+#footer .colum #redess .btn-sus{
+          border: 2px solid transparent;
+          background: #000000;
+          color: #ffffff;
+          font-size: 16px;
+          line-height: 25px;
+          padding: 10px 0;
+          text-decoration: none;
+          text-shadow: none;
+          border-radius: 15px;
+          box-shadow: none;
+          transition: 0.25s;
+          display: block;
+          width: 50px;
+          margin: 0 auto;
 
-#footer .colum #redess input {
-text-align: left;
-background-color: #ECF0F1;
-border: 2px solid transparent;
-border-radius: 15px;
-font-size: 16px;
-font-weight: 200;
-padding: 10px 0;
-width: 250px;
-transition: border .5s;
 }
 
 #footer .colum #redess:focus {
