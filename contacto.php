@@ -19,9 +19,8 @@
 <div id="contacto">
     <h1>Contáctenos</h1>
     <form action="contacto_procesar.php" method="post">
-        <div class="login-form">
-            <label for="nombre">Nombre:</label>
-            <input type="text" name="nombre"
+        <div class="login-form">   
+            <input type="text" value placeholder="nombre y apellido" name="nombre"
 
             <?php  if (isset($_SESSION["nombre"])){?>
                 value="<?php echo $_SESSION["nombre"]?>"
@@ -29,23 +28,20 @@
             >
         </div>
         <div class="login-form">
-            <label for="correo">Correo: </label>
-            <input type="email" name="correo"
+            <input type="email" value placeholder="email" name="correo"
             <?php  if (isset($_SESSION["correo"])){?>
                 value="<?php echo $_SESSION["correo"]?>"
             <?php } ?>
             >
         </div>
 		<div class="login-form">
-            <label for="telefono">Telefono:</label>
-            <input type="text" name="telefono">
+            <input type="text" value placeholder = "celular" name="telefono">
 
         </div>
         <div class="login-form">
-            <label for="pedido">Numero de pedido: </label>
-            <input type="text" name="pedido">
+            <input type="text" value placeholder= "Número de pedido" name="pedido">
         </div>
-        <div class="linea">
+        <div class="login-form">
 					<label>Motivo:</label>
 				
 					<select name="motivo">
@@ -57,8 +53,7 @@
 				</div>
 
         <div class="login-form">
-            <label for="mensaje">Mensaje </label>
-            <textarea name="mensaje" rows="4" cols="50">
+            <textarea name="mensaje" value placeholder= "mensaje" rows="4" cols="50">
             </textarea>
         </div>
         <div >

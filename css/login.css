@@ -22,7 +22,8 @@ body {
   }
         
 .login-form {
-  text-align: center;
+  text-align: left;
+  border-radius: 15px;
 }
 .fila {
   margin-bottom: 10px;
@@ -79,7 +80,8 @@ body {
 
 #contacto{
   margin: 20px 50px;
-  border:2px solid black;
+  border-radius: 15px;
+  background-color: #FFF;
   width: 400px;
   padding: 10px;
 }
