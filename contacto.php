@@ -53,8 +53,7 @@
 				</div>
 
         <div class="login-form">
-            <textarea name="mensaje" value placeholder= "mensaje" rows="4" cols="50">
-            </textarea>
+            <textarea name="mensaje" value placeholder= "mensaje" rows="4" cols="50"></textarea>
         </div>
         <div >
             <button class="btn-login" input="submit">Enviar</button>
