@@ -1,0 +1,52 @@
+body {
+    background: #fff;
+    font-family: 'Nunito', sans-serif;
+    margin: 0;
+    overflow:auto;
+    color: #54667a;
+    width: 100%;
+    overflow-x: hidden;
+
+}
+.cabecera{
+    border: 2px solid black;
+    position: absolute;
+    height: 70px;
+    background: #54667a;
+    width: 70%;
+    float:right;
+    display: flex;
+}
+.sidebar-menu {
+    position: absolute;
+    width: 240px;
+    height: 100%;
+    top: 0px;
+    padding-top: 10px;
+    background: rgb(199, 196, 196);
+    border: 2px solid black;
+    float: left;
+}
+.sidebar-menu .logo{
+    width: 230px;
+    border: 2px solid black;
+}
+
+.sidebar-menu .logo img{
+    margin: auto auto;
+}
+
+.sidebar-menu .perfil {
+    text-align: center;
+    position: relative; 
+    border: 2px solid black;
+}
+.sidebar-menu .perfil .foto-perfil img{
+      width: 50px;
+      margin: 0 auto;
+      border-radius: 100%;
+      border: 2px solid black;
+}
+.sidebar-menu .cabecera ul li{
+    list-style-type: none;
+}
