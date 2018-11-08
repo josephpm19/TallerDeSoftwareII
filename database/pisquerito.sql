@@ -1,19 +1,17 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.0
+-- version 4.7.4
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 31-10-2018 a las 16:57:51
--- Versión del servidor: 10.1.25-MariaDB
--- Versión de PHP: 7.1.7
-
-CREATE DATABASE IF NOT EXISTS `pisquerito`;
-USE `pisquerito`;
+-- Tiempo de generación: 08-11-2018 a las 19:58:49
+-- Versión del servidor: 10.1.28-MariaDB
+-- Versión de PHP: 7.1.11
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
+
 
 /*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
 /*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
@@ -55,6 +53,8 @@ CREATE TABLE `cliente` (
   `id_cliente` int(11) NOT NULL,
   `nombre` varchar(50) NOT NULL,
   `apellido` varchar(100) NOT NULL,
+  `usuario` varchar(50) NOT NULL,
+  `pass` varchar(50) NOT NULL,
   `direccion` varchar(300) NOT NULL,
   `ciudad` varchar(20) NOT NULL,
   `region` varchar(20) NOT NULL,
@@ -71,7 +71,27 @@ CREATE TABLE `cliente` (
 
 CREATE TABLE `imagen` (
   `id_imagen` int(11) NOT NULL,
-  `id_producto` int(11) NOT NULL
+  `id_producto` int(11) NOT NULL,
+  `imagen` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `imagen`
+--
+
+INSERT INTO `imagen` (`id_imagen`, `id_producto`, `imagen`) VALUES
+(1, 2, 'vino1.webp');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `listaproductos`
+--
+
+CREATE TABLE `listaproductos` (
+  `id_listaproductos` int(11) NOT NULL,
+  `id_producto` int(11) NOT NULL,
+  `id_venta` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -82,11 +102,19 @@ CREATE TABLE `imagen` (
 
 CREATE TABLE `producto` (
   `id_producto` int(11) NOT NULL,
-  `nombre` varchar(200) NOT NULL,
-  `precio` int(11) NOT NULL,
+  `nombre` varchar(1000) NOT NULL,
+  `precio` double NOT NULL,
   `descrip` text NOT NULL,
-  `id_imagen` int(11) NOT NULL
+  `stock` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `producto`
+--
+
+INSERT INTO `producto` (`id_producto`, `nombre`, `precio`, `descrip`, `stock`) VALUES
+(2, 'Vino Tinto Ventisquero  750 ml', 54.99, 'Cuando pasamos por momentos de amplia felicidad en los que deseamos celebrar logros, satisfacciones, y congratularnos con ellos: la familia, así también con amigos, vecinos, etc. Para esos instantes maravillosos está el Vino Tinto Ventisquero Clásico Cabernet Sauvignon, la gran opción para unirse ese bello día.', 59),
+(3, 'Vino Tinto Las Moras Black Label 750 ml', 69.99, 'El Vino Tinto Ventisquero Clásico Cabernet Sauvignon, en boca tiene buen cuerpo y acidez equilibrada, con taninos maduros y un buen balance entre la fruta y la madera en su retrogusto. Anímate a comprarlo por la web de Wong Perú', 99);
 
 -- --------------------------------------------------------
 
@@ -136,14 +164,22 @@ ALTER TABLE `cliente`
 -- Indices de la tabla `imagen`
 --
 ALTER TABLE `imagen`
-  ADD PRIMARY KEY (`id_imagen`);
+  ADD PRIMARY KEY (`id_imagen`),
+  ADD KEY `id_producto` (`id_producto`);
+
+--
+-- Indices de la tabla `listaproductos`
+--
+ALTER TABLE `listaproductos`
+  ADD PRIMARY KEY (`id_listaproductos`),
+  ADD KEY `id_producto` (`id_producto`),
+  ADD KEY `id_venta` (`id_venta`);
 
 --
 -- Indices de la tabla `producto`
 --
 ALTER TABLE `producto`
-  ADD PRIMARY KEY (`id_producto`),
-  ADD KEY `fk_imagen` (`id_imagen`);
+  ADD PRIMARY KEY (`id_producto`);
 
 --
 -- Indices de la tabla `suscriptor`
@@ -167,41 +203,60 @@ ALTER TABLE `venta`
 -- AUTO_INCREMENT de la tabla `administrador`
 --
 ALTER TABLE `administrador`
-  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
 --
 -- AUTO_INCREMENT de la tabla `cliente`
 --
 ALTER TABLE `cliente`
   MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT de la tabla `imagen`
 --
 ALTER TABLE `imagen`
-  MODIFY `id_imagen` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_imagen` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+
+--
+-- AUTO_INCREMENT de la tabla `listaproductos`
+--
+ALTER TABLE `listaproductos`
+  MODIFY `id_listaproductos` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
-  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
 --
 -- AUTO_INCREMENT de la tabla `suscriptor`
 --
 ALTER TABLE `suscriptor`
   MODIFY `id_suscriptor` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- AUTO_INCREMENT de la tabla `venta`
 --
 ALTER TABLE `venta`
   MODIFY `id_venta` int(11) NOT NULL AUTO_INCREMENT;
+
 --
 -- Restricciones para tablas volcadas
 --
 
 --
--- Filtros para la tabla `producto`
+-- Filtros para la tabla `imagen`
 --
-ALTER TABLE `producto`
-  ADD CONSTRAINT `fk_imagen` FOREIGN KEY (`id_imagen`) REFERENCES `imagen` (`id_imagen`) ON UPDATE CASCADE;
+ALTER TABLE `imagen`
+  ADD CONSTRAINT `imagen_ibfk_1` FOREIGN KEY (`id_producto`) REFERENCES `producto` (`id_producto`) ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `listaproductos`
+--
+ALTER TABLE `listaproductos`
+  ADD CONSTRAINT `listaproductos_ibfk_1` FOREIGN KEY (`id_producto`) REFERENCES `producto` (`id_producto`) ON UPDATE CASCADE,
+  ADD CONSTRAINT `listaproductos_ibfk_2` FOREIGN KEY (`id_venta`) REFERENCES `venta` (`id_venta`) ON UPDATE CASCADE;
 
 --
 -- Filtros para la tabla `venta`
