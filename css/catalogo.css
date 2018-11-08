@@ -1,0 +1,94 @@
+.bloque-todo{
+    margin: 15px;
+    height: 805px;
+}
+ .bloque-todo h1{
+    text-align: center;
+    margin-top: 0;
+    margin-bottom:0; 
+}
+.bloque-todo .filtro{
+    width: 25%;
+    height: 750px;
+    display: inline-block;
+    float: left;
+    clear: both;
+    background: #fff;
+    border-radius:15px;
+    box-shadow: 15px 10px 10px rgba(0,0,0, .25)
+
+}
+.bloque-todo .productos{
+    width: 72%;
+    height: 750px;
+    display: inline-block;
+    float: right;    
+}
+.bloque-todo .productos .box-product{
+    position: absolute;
+    width: 240px;
+    height: 300px;
+    background: #fff;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, .25);
+    border-radius: 15px;
+    overflow: hidden;
+}
+.bloque-todo .productos .box-product .img-product{
+    height: 100%;
+    box-sizing: border-box;
+}
+.bloque-todo .productos .box-product .img-product img{
+    display: block;
+    width: 90%;
+    margin: 20px auto 0;
+    border-radius: 15px;
+}
+.bloque-todo .productos .box-product .detalles{
+    position: absolute;
+    width: 100%;
+    bottom: -49px;
+    background: #fff;
+    padding: 10px;
+    box-sizing: border-box;
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    transition: .5s;
+}
+.bloque-todo .productos .box-product:hover .detalles{
+    bottom: 15px;
+    box-shadow: 0 -5px 15px rgba(0,0,0, .25)
+}
+.bloque-todo .productos .box-product .detalles h2{
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    width: 100%;
+}
+.bloque-todo .productos .box-product .detalles h2 span{
+    font-size: 12px;
+    color: #ccc;
+    font-weight: normal;
+}
+.bloque-todo .productos .box-product .precio{
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-weight: bold;
+    color: #000000;
+    font-size: 20px;
+}
+
+.bloque-todo .productos .box-product .detalles a{
+    display: block;
+    padding: 5px;
+    color: #fff;
+    margin: 15px 0 0;
+    background: #15ff00;
+    text-align: center;
+    text-decoration: none;
+    transition: .3s;
+    cursor: pointer;
+}
+.bloque-todo .productos .box-product .detalles a:hover{
+    color:#fff;
+    background-color: #11a504
+}

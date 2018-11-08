@@ -4,27 +4,159 @@ body{
 }
 .img-title{
     border:2px solid black;
-    width: 100%;
-    height: 700px;;
-    margin: 0 auto;
+    height: 700px;
+    padding: 0;
 }
 .imagen-producto{
-    width: 50%;
+    width: 40%;
     height: 600px;
     border:2px solid black;
     margin: 30px;
     float: left;
-
-}
+    clear: both;
+    
+}   
 .imagen-producto img{
     width: 300px;
     height: 300px;
-    
 }
 .bloque-datos{
-    width: 43%;
+    width: 50%;
     height: 600px;
     border:2px solid black;
-    display: flex;
     margin: 30px;
+    float: right;
+}
+.bloque-datos .titulo{
+    border:2px solid black;
+    margin-top:50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.bloque-datos .precio{
+    border:2px solid black;
+    text-align: center;
+    padding-top: 5px;
+}
+.bloque-datos .cantidad input{
+}
+.bloque-datos .btn-cart{
+    border:2px solid black;
+    height: 80px;
+
+}
+
+          
+  .bloque-datos .btn-cart #btn-carrito {
+    border: 2px solid transparent;
+    background: #02f322;
+    color: #000000;
+    font-size: 25px;
+    line-height: 25px;
+    padding: 10px 0;
+    border-radius: 5px;
+    box-shadow: none;
+    transition: 0.25s;
+    display: block;
+    width: 500px;
+    height: 80px;
+    margin: 0 auto;
+    font-family: 'Nunito', sans-serif
+  }
+          
+  .bloque-datos .btn-cart #btn-carrito:hover {
+    background-color: rgb(8, 143, 8);
+  }
+
+.bloque-datos .contador #progress_bar{
+    margin-top:15px
+}
+.bloque-datos .contador .progressbar.progressbar{
+    background:#ffe8e8;
+    border:0px solid whitesmoke;
+    height:11px
+}
+.bloque-datos .contador.progressbar.progressbar div{
+    background:#d95350;
+    height:11px
+}
+.progressbar.progressbar.active div{
+    -webkit-animation:2s linear 0s normal none infinite running progress-bar-stripes;
+    animation:2s linear 0s normal none infinite running progress-bar-stripes
+}
+.bloque-datos .contador .progress-striped.progressbar.progressbar div{
+    background-image:-webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, transparent 25%, transparent 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, transparent 75%, transparent);
+    background-image:linear-gradient(45deg, rgba(255, 255, 255, 0.15) 25%, rgba(0, 0, 0, 0) 25%, rgba(0, 0, 0, 0) 50%, rgba(255, 255, 255, 0.15) 50%, rgba(255, 255, 255, 0.15) 75%, rgba(0, 0, 0, 0) 75%, rgba(0, 0, 0, 0));
+    background-size:40px 40px
+}
+.bloque-datos .contador.items-count{
+    margin-top:0px;
+    margin-bottom:0px
+}
+.bloque-datos .contador.count{
+    color:#a94442;
+    padding:1px;
+}
+.bloque-datos .contador.items-count p{
+    padding-bottom:5px;
+    margin:0;
+    text-transform:uppercase;
+    font-weight:700;
+    text-align:center;
+    font-family:"Open Sans",Arial,sans-serif;
+}
+.bloque-datos .contador.progressbar{
+    position:relative;
+    display:block;
+    background-color:#ca0000;
+    border:1px solid #ddd;
+    margin-bottom:15px;
+    -webkit-box-shadow:inset 0 1px 2px rgba(0, 0, 0, .1);
+    box-shadow:inset 0 1px 2px rgba(0, 0, 0, .1)
+}
+.bloque-datos .contador.progressbar > div{
+    background-color:#ca0000;
+    width:0;margin-bottom:0;height:15px
+}
+.bloque-datos .contador.progressbar > div.less-than-ten{
+    background-color:#ca0000 !important;
+}
+.bloque-datos .contador #clock-ticker{
+    display:block;
+    margin-bottom:0 ;
+}
+.bloque-datos .contador #clock-ticker .block{
+    position:relative;
+    color:#000;
+    font-weight:bold;
+    float:left;
+    text-align:center;
+    width:25%
+}
+.bloque-datos .contador #clock-ticker .block .flip-top{
+    width:88px;
+    height:39px;
+    line-height:40px;
+    font-size:40px;
+    text-align:center;
+}
+.bloque-datos .contador #clock-ticker .block .label,span.flip-top{
+    color:#000;
+    font-weight:bold;
+    text-align:center;
+    font-size:14px;
+    text-transform:uppercase;
+    width:88px;
+    line-height:25px;
+    font-family:"Open Sans",Arial,sans-serif;
+}
+
+
+.description{
+    border:2px solid black;
+    height: auto;
+    display: block;
+    clear: both;
+    margin: 30px;
+
 }

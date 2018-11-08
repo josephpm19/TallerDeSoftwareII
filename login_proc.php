@@ -23,7 +23,7 @@ if (count($usuarios) == 1) {
 
 # Salida
 if ($validacion) {
-    header('Location: index.php');
+    header('Location: admin/index.php');
 }
 else {
     header('Location: login.php?error=1');
