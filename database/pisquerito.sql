@@ -7,6 +7,9 @@
 -- Versión del servidor: 10.1.25-MariaDB
 -- Versión de PHP: 7.1.7
 
+CREATE DATABASE IF NOT EXISTS `pisquerito`;
+USE `pisquerito`;
+
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
 START TRANSACTION;
