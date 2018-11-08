@@ -62,19 +62,10 @@
 </div>
 <div id="mapa">
     <h2 style="display:block;">Ubícanos</h2>
-<div id="googleMap" style="width:100%;height:350px;border-radius:15px; "></div>
-
-    <script>
-    function myMap() {
-    var mapProp= {
-        center:new google.maps.LatLng(-12.079414,-77.063486),
-        zoom:15,
-    };
-    var map=new google.maps.Map(document.getElementById("googleMap"),mapProp);
-    }
-    </script>
-
-    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYQXwV-LSQoHfCQDiVYQxkduiemHHbuck&callback=myMap"></script>
+<div id="googleMap" style="width:100%;height:350px;border-radius:15px; ">
+<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3901.479116600894!2d-77.0657064855583!3d-12.079317545794813!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105c9046878d60f%3A0xf86bb1b28da58673!2sEl+Pisquerito!5e0!3m2!1ses-419!2spe!4v1541686420169" width="100%" height="100%" frameborder="0" style="border:0" allowfullscreen></iframe>
+</div>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYQXwV-LSQoHfCQDiVYQxkduiemHHbuck&callback=myMap"></script>
 </div>
 	<?php include 'partes/footer.php' ?>
 
