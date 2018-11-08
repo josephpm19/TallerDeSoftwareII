@@ -68,6 +68,5 @@
 <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBYQXwV-LSQoHfCQDiVYQxkduiemHHbuck&callback=myMap"></script>
 </div>
 	<?php include 'partes/footer.php' ?>
-
 </body>
 </html>
