@@ -6,8 +6,7 @@ $password=$_POST["password"];
 
 
 #proceso
-
-$db = new PDO('mysql:host=localhost;dbname=pisquerito;charset=utf8', 'root', '');
+include 'partes/config.php';
 $stmt = $db->query("SELECT * FROM administrador WHERE email='$correo' AND pass='$password'");
 $usuarios = $stmt->fetchAll();
 /*print_r($usuarios);
@@ -23,9 +22,9 @@ if (count($usuarios) == 1) {
 
 # Salida
 if ($validacion) {
-    header('Location: admin/index.php');
+    header('Location: admin/admin.html');
 }
 else {
-    header('Location: login.php?error=1');
+    header('Location: admin.html?error=1');
 }
 ?>

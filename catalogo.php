@@ -36,34 +36,15 @@ $productos = $stmt->fetchAll();
          			<img src="img/image.png"  alt="">
         		</div>
         		<div class="detalles">
-            		<h2><?php echo $n["nombre"] ?> <br> <span> Zapatilla Nike</span></h2>
+						<h2><?php echo $n["nombre"] ?> <br> <span> <?php echo $n["categoria"] ?></span></h2>
+					
             		<div class="precio"><?php echo $n["precio"] ?></div>
             		<a href="#">Comprar Ahora</a>
         		</div>
     		</div>
 			<?php } ?>
 
-			<div class="box-product">
-        	<div class="img-product">
-         		<img src="img/image.png"  alt="">
-        	</div>
-        	<div class="detalles">
-            	<h2>hola <br> <span> Zapatilla Nike</span></h2>
-            	<div class="precio">14.99</div>
-            	<a href="#">Comprar Ahora</a>
-        	</div>
-		</div>
-		
-		<div class="box-product">
-        	<div class="img-product">
-         		<img src="img/image.png"  alt="">
-        	</div>
-        	<div class="detalles">
-            	<h2>hola <br> <span> Zapatilla Nike</span></h2>
-            	<div class="precio">14.99</div>
-            	<a href="#">Comprar Ahora</a>
-        	</div>
-    	</div>
+			
 			
 		</div>
 	</div>	
