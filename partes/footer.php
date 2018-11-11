@@ -24,12 +24,15 @@
             <li> <a href="#"> <i class="fab fa-pinterest-square"></i></a> </li>
         </ul>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-        <input type="text" placeholder="Tu nombre" id="suscrinombre" maxlength="10" size="5">
-        <input type="text" placeholder="Tu email" id="suscriemail"> 
-        <button class="btn-sus" type="submit">Suscribirse</button>
+        <form action="proc_form_sus.php" method="POST">
+            <input type="text" name="suscrinombre" placeholder="Tu nombre"  maxlength="10" size="5">
+            <input type="email" name="suscriemail" placeholder="Tu email" > 
+            <button class="btn-sus" type="submit">Suscribirse</button>
+        </form>
+        
     </div> 
     
     <div id="copyr">
-        <p>© 2018 Copyright Elpisquerito.com. All Rights Reserved.</p>
+        <p>© 2018 Copyright Pisquerito.com. All Rights Reserved.</p>
     </div>   
 </div>

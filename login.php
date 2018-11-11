@@ -19,7 +19,13 @@
 		<div class="login-box">
 			<div class="titulo">
 				<h1>Iniciar Sesion</h1>
+
+				
+				
 			</div>
+			<?php if (isset($_GET["error"])) { ?>
+    			<p style="color: red">Datos inválidos</p>
+				<?php } ?>
 			<form action="login_proc.php" method="post">
 				<div class="login-form">
 					<div class="fila">

@@ -3,16 +3,13 @@ body{
     font-family: 'Nunito', sans-serif;
 }
 .todo{
-    border:2px solid black;
 }
 .todo .cabecera{
-    border:2px solid black;
     height: 70px;
     background: rgb(109, 104, 104);
 }
 .todo .cabecera .logo{
     width: 24%;
-    border:2px solid rgb(216, 5, 5);
     display: flex;
     height: 70px;
     float: left;
@@ -50,12 +47,11 @@ body{
         padding: 0;
 }
 .todo .bloque-cuerpo .bloque-menu{
-    border:2px solid black;
     width: 24%;
     float: left;
     height: 800px;
     margin: 0px;
-    background: #6d5a5a;
+    background: #2C304D;
 }
 .todo .bloque-cuerpo .bloque-menu .perfil {
     text-align: center;

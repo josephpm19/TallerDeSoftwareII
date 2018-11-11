@@ -1,7 +1,5 @@
 <?php
-include 'partes/config.php'
-$stmt = $db->query("SELECT * FROM administrador");
-$productos = $stmt->fetchAll();
+session_start();
 ?>
 
 <!DOCTYPE html>
@@ -19,31 +17,9 @@ $productos = $stmt->fetchAll();
 </head>
 <body>
     <div class="todo">
-        <div class="cabecera">
-            <div class="logo"> 
-                <img src="img/logo.png" alt="">
-            </div>
-            <div class="buscador">
-                <a href="#" id="search"> <i class="fa fa-search"></i> </a>
-            </div>
-            <div class="foto-perfil1">
-                <img src="img/6.jpg" alt="Foto Perfil">
-                <div class="logout">
-                    <a href=""><i class="fas fa-sign-out-alt"></i></a> 
-                </div>
-            </div>    
-        </div>
+        <?php include 'partes/cab.php'?>
         <div class="bloque-cuerpo">
-            <div class="bloque-menu">
-                <div class="perfil">
-                    <div class="foto-perfil">
-                        <img src="img/6.jpg" alt="Foto Perfil">
-                    </div>
-                    <div class="nombre-perfil">
-                        Bienvenido <span><?php echo $n["nombre"] ?></span>
-                    </div>
-                </div>
-            </div>
+                    <?php include 'partes/side.php'?>
             <div class="content">
             </div>
         </div>
