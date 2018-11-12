@@ -22,13 +22,12 @@ if (count($usuarios) == 1) {
         $db = new PDO('mysql:host=localhost;dbname=pisquerito;charset=utf8', 'root', '');
         $stmt = $db->query("SELECT * FROM administrador WHERE email='$correo'");
         $admin = $stmt->fetchAll();    
-        
         session_start();
-    $_SESSION["correo"] = $correo;
-    $_SESSION["nombre"]=$nombres;
-    $_SESSION["apellido"]=$apellido;
-
-
+         foreach ($admin as $a) { 
+              $_SESSION["nombre"]=$a["nombre"];
+              $_SESSION["apellido"]=$a["apellido"];
+              $_SESSION["email"]=$a["email"];   
+         } 
 }
 
 # Salida

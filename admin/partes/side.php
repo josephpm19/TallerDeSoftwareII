@@ -4,7 +4,7 @@
                         <img src="img/6.jpg" alt="Foto Perfil">
                     </div>
                     <div class="nombre-perfil">
-                        Bienvenido <span><?php echo $nombre ?></span>
+                        Bienvenido <span><?php echo $_SESSION["nombre"]; ?></span>
                     <div class="nombre-tools">
                             <h2>Herramientas</h2>
                         </div>

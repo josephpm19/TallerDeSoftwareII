@@ -39,7 +39,13 @@ $productos = $stmt->fetchAll();
 						<h2><?php echo $n["nombre"] ?> <br> <span> <?php echo $n["categoria"] ?></span></h2>
 					
             		<div class="precio"><?php echo $n["precio"] ?></div>
-            		<a href="#">Comprar Ahora</a>
+					<a href="#">Comprar Ahora</a>
+					
+					<form action="producto.php" method="GET">
+                    <input type="hidden" name="id" value="<?php echo $n["id_producto"] ?>">
+                        <button type="submit">Ver Producto</button>
+                	</form>  
+
         		</div>
     		</div>
 			<?php } ?>

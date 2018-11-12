@@ -1,5 +1,8 @@
 <?php
 session_start();
+$db = new PDO('mysql:host=localhost;dbname=pisquerito;charset=utf8', 'root', '');
+$stmt = $db->query("SELECT * FROM cliente");
+$clientes = $stmt->fetchAll();
 ?>
 
 <!DOCTYPE html>
@@ -23,31 +26,34 @@ session_start();
                     <?php include 'partes/side.php'?>
             <div class="content">
                 <div class="nombre-tabla">
-                     <h2>Lista de Productos</h2> 
+                     <h2>Clientes</h2> 
                 </div>
                 
                 <table>
                     <tr>
                         <th>#</th>
-                        <th>TITULO</th>
-                        <th>PRECIO</th>
-                        <th>STOCK</th>
-                        <th>CATEGORIA</th>
+                        <th>NOMBRE</th>
+                        <th>APELLIDO</th>
+                        <th>USUARIO</th>
+                        <th>DIRECCION</th>
+                        <th>CIUDAD</th>
+                        <th>REGION</th>
+                        <th>CÓDIGO POSTAL</th>
                         <th>ACCION</th>
                     </tr>
-                    <?php if (count($producto) == 0) { ?>
+                    <?php if (count($clientes) == 0) { ?>
                     <tr>
                         <td colspan="5" style="text-align: center"> No se encontraron registros</td>
                     </tr>
                     <?php } ?>
 
-                    <?php foreach ($producto as $p) { ?>
+                    <?php foreach ($clientes as $cli) { ?>
                     <tr>
-                        <td><?php echo $p["id_producto"] ?></td>
-                        <td><?php echo $p["nombre"] ?></td>
-                        <td><?php echo $p["precio"] ?></td>
-                        <td><?php echo $p["stock"] ?></td>
-                        <td><?php echo $p["categoria"] ?></td>
+                        <td><?php echo $cli["id_producto"] ?></td>
+                        <td><?php echo $cli["nombre"] ?></td>
+                        <td><?php echo $cli["precio"] ?></td>
+                        <td><?php echo $cli["stock"] ?></td>
+                        <td><?php echo $cli["categoria"] ?></td>
                         <td style="text-align: center">            
                             <form action="borrar_usuario.php" method="POST">
                                 <input type="hidden" name="id" value="<?php echo $u["id"] ?>">
