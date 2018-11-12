@@ -19,9 +19,11 @@ if (count($usuarios) == 1) {
     $id=intval($_GET["id"]);
     $nombre=intval($_GET["nombre"]);
 
-    include 'partes/config.php';
-    $stmt = $db->query("SELECT * FROM usuarios WHERE id ='$id'");
-    session_start();
+        $db = new PDO('mysql:host=localhost;dbname=pisquerito;charset=utf8', 'root', '');
+        $stmt = $db->query("SELECT * FROM administrador WHERE email='$correo'");
+        $admin = $stmt->fetchAll();    
+        
+        session_start();
     $_SESSION["correo"] = $correo;
     $_SESSION["nombre"]=$nombres;
     $_SESSION["apellido"]=$apellido;
