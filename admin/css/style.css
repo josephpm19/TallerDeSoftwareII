@@ -3,13 +3,14 @@ body{
     font-family: 'Nunito', sans-serif;
 }
 .todo{
+    padding: 0;
 }
 .todo .cabecera{
     height: 70px;
     background: rgb(109, 104, 104);
 }
 .todo .cabecera .logo{
-    width: 24%;
+    width: 20%;
     display: flex;
     height: 70px;
     float: left;
@@ -23,13 +24,11 @@ body{
 .todo .cabecera .buscador{
     width: 200px;
     display: inline-block;
-        border:2px solid rgb(248, 12, 12);
 
 }
 .todo .cabecera .foto-perfil1{
     float: right;
     width: 250px;
-    border:2px solid black;
     display: flex;
     height: 70px;
 }
@@ -42,31 +41,57 @@ body{
     
 }
 .todo .bloque-cuerpo{
-        border:2px solid black;
         display: block;
-        padding: 0;
+        margin: 0;
+        background: rgb(194, 196, 212);
 }
 .todo .bloque-cuerpo .bloque-menu{
-    width: 24%;
+    width: 20%;
     float: left;
-    height: 800px;
-    margin: 0px;
+    height: auto;
     background: #2C304D;
+    overflow: visible;
+
 }
 .todo .bloque-cuerpo .bloque-menu .perfil {
-    text-align: center;
-    border: 2px solid black;
     margin-top: 30px;
+    font-size: 18px;
+    color:#fff;
 }
 .todo .bloque-cuerpo .bloque-menu .perfil .foto-perfil img{
       width: 100px;
-      margin: 0 auto;
+      margin: auto auto;
       border-radius: 100%;
-      border: 2px solid black;
+      text-align: center;
+      display: block;
+
+}
+.todo .bloque-cuerpo .bloque-menu .perfil .nombre-perfil{
+      text-align: center
+}
+.todo .bloque-cuerpo .bloque-menu .perfil .tools{
+    margin: 5px;
+    background: rgb(30, 34, 61);
+    height: auto;
+    display: flex;
+}
+.todo .bloque-cuerpo .bloque-menu .perfil .tools ul{
+    font-size: 50px;
+    color:#fff;
+}
+.todo .bloque-cuerpo .bloque-menu .perfil .tools ul li{
+    list-style-type: none;
+
+}
+.todo .bloque-cuerpo .bloque-menu .perfil .tools ul li a{
+    text-decoration: none;
+    font-size: 18px;
+    color:#fff;
 }
 .todo .bloque-cuerpo .content{
-    border: 2px solid rgb(240, 9, 9);
-    width: 74%;
+    width: 78%;
     height: 800px;
     float: right;
+    background: #fff;
+    box-sizing: border-box;
 }
