@@ -1,24 +1,33 @@
-<?php session_start();?>
-<!doctype <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Contacto</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
-    <script src="main.js"></script>
-</head>
-<body>
-    <?php include 'partes/header.php' ?>
-    <?php include 'partes/navegacion.php' ?>
+<?php
+# Entrada 
+$nombre = $_POST["nombre"];
+$apellido = $_POST["apellido"];
+$correo = $_POST["correo"];
+$telefono = $_POST["telefono"];
+$pedido = $_POST["pedido"];
+$motivo = $_POST["motivo"];
+$mensaje = $_POST["mensaje"];
 
-    <main>
-        <h1>Cont</h1>
+# Proceso
 
-        <p>Estimado <b><?php echo $_COOKIE["nombre"];?></b>  gracias por enviarnos su formulario</p>
-    </main>
+$db = new PDO('mysql:host=localhost;dbname=pisquerito;charset=utf8', 'root', '');
+$db->query("INSERT INTO contacto VALUES (NULL, '$nombre', '$apellido','$correo','$telefono','$pedido','$motivo','$mensaje')");
 
-    <?php include 'partes/footer.php' ?>
-</body>
-</html>
+
+//session_start();
+setcookie("nombre",$nombre,time()+3600*5);
+setcookie("correo",$correo,time()+3600*5);
+setcookie("telefono",$telefono,time()+3600*5);
+setcookie("pedido",$pedido,time()+3600*5);
+setcookie("mensaje",$mensaje,time()+3600*5);
+
+//$_COOKIE["nombre"]=$nombre;
+//$_COOKIE["correo"]=$correo;
+//$_COOKIE["telefono"]=$telefono;s
+//$_COOKIE["pedido"]=$pedido;
+//$_COOKIE["mensaje"]=$mensaje;
+
+# Salida
+    header("Location: contacto_exitoso.php");
+
+?>

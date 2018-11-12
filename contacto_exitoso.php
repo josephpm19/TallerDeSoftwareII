@@ -1,26 +1,24 @@
-<?php
-# Entrada 
-$nombre = $_POST["nombre"];
-$correo = $_POST["correo"];
-$telefono = $_POST["telefono"];
-$pedido = $_POST["pedido"];
-$mensaje = $_POST["mensaje"];
+<?php session_start();?>
+<!doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Contacto</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css" />
+    <script src="main.js"></script>
+</head>
+<body>
+    <?php include 'partes/header.php' ?>
+    <?php include 'partes/navegacion.php' ?>
 
-# Proceso
-//session_start();
-setcookie("nombre",$nombre,time()+3600*5);
-setcookie("correo",$correo,time()+3600*5);
-setcookie("telefono",$telefono,time()+3600*5);
-setcookie("pedido",$pedido,time()+3600*5);
-setcookie("mensaje",$mensaje,time()+3600*5);
+    <main>
+        <h1>Cont</h1>
 
-//$_COOKIE["nombre"]=$nombre;
-//$_COOKIE["correo"]=$correo;
-//$_COOKIE["telefono"]=$telefono;s
-//$_COOKIE["pedido"]=$pedido;
-//$_COOKIE["mensaje"]=$mensaje;
+        <p>Estimado <b><?php echo $_COOKIE["nombre"];?></b>  gracias por enviarnos su formulario</p>
+    </main>
 
-# Salida
-    header("Location: contacto_exitoso.php");
-
-?>
+    <?php include 'partes/footer.php' ?>
+</body>
+</html>

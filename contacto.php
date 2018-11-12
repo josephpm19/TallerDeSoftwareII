@@ -20,40 +20,34 @@
     <h1>Contáctenos</h1>
     <form action="contacto_procesar.php" method="post">
         <div class="login-form">   
-            <input type="text" value placeholder="nombre y apellido" name="nombre"
-
+            <input type="text" name="nombre" placeholder="Nombre" 
             <?php  if (isset($_SESSION["nombre"])){?>
                 value="<?php echo $_SESSION["nombre"]?>"
             <?php } ?>
             >
         </div>
         <div class="login-form">
-            <input type="email" value placeholder="email" name="correo"
+            <input type="text" name="apellido"  placeholder = "Apellido">
+        </div>
+        <div class="login-form">
+            <input type="email" name="correo" placeholder="Correo" 
             <?php  if (isset($_SESSION["correo"])){?>
                 value="<?php echo $_SESSION["correo"]?>"
             <?php } ?>
             >
         </div>
 		<div class="login-form">
-            <input type="text" value placeholder = "celular" name="telefono">
-
+            <input type="text" name="telefono" placeholder = "Celular" >
         </div>
         <div class="login-form">
-            <input type="text" value placeholder= "Número de pedido" name="pedido">
+            <input type="text" name="pedido" placeholder= "Número de pedido" >
         </div>
         <div class="login-form">
-					<label>Motivo:</label>
-				
-					<select name="motivo">
-						<option value="1">Sugerencia</option>
-						<option value="2">Reclamo</option>
-						<option value="3">Interes</option>
-						<option value="4">Otros</option>
-					</select>
-				</div>
+            <input type="text" name="motivo" placeholder= "Motivo" >
+        </div>
 
         <div class="login-form">
-            <textarea name="mensaje" value placeholder= "mensaje" rows="4" cols="50"></textarea>
+            <textarea name="mensaje" placeholder= "Mensaje" rows="4" cols="50"></textarea>
         </div>
         <div >
             <button class="btn-login" input="submit">Enviar</button>

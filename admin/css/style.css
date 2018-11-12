@@ -81,7 +81,9 @@ body{
 }
 .todo .bloque-cuerpo .bloque-menu .perfil .tools ul li{
     list-style-type: none;
-
+}
+.todo .bloque-cuerpo .bloque-menu .perfil .tools ul li a .i .fas{
+    margin: 10px;
 }
 .todo .bloque-cuerpo .bloque-menu .perfil .tools ul li a{
     text-decoration: none;
@@ -90,8 +92,34 @@ body{
 }
 .todo .bloque-cuerpo .content{
     width: 78%;
-    height: 800px;
+    height: auto;
     float: right;
     background: #fff;
-    box-sizing: border-box;
+    margin: 10px auto;
+    border: 2px solid black;
+    margin-right:10px; 
+}
+.todo .bloque-cuerpo .content .nombre-tabla{
+    font-weight: 20px;
+    text-align: left;
+    font-size: 20px;
+    margin: 20px;
+}
+.todo .bloque-cuerpo .content table{
+    width: 95%; 
+    border-collapse: collapse;
+    margin: 10px auto;
+}
+.todo .bloque-cuerpo .content table tr{
+    border: 2px solid rgb(155, 155, 155);
+}
+.todo .bloque-cuerpo .content table th{
+    border: 2px solid rgb(155, 155, 155);
+    text-align: left;
+}
+.todo .bloque-cuerpo .content table td{
+    border: 2px solid rgb(155, 155, 155);
+}
+.todo .bloque-cuerpo .content table td button i{
+    display: inline-block;
 }

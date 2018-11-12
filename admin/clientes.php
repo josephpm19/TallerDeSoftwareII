@@ -1,8 +1,5 @@
 <?php
 session_start();
-$db = new PDO('mysql:host=localhost;dbname=pisquerito;charset=utf8', 'root', '');
-$stmt = $db->query("SELECT * FROM producto");
-$producto = $stmt->fetchAll();
 ?>
 
 <!DOCTYPE html>
@@ -10,7 +7,7 @@ $producto = $stmt->fetchAll();
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Productos|Panel de Administracion</title>
+    <title>Clientes | Panel de Administracion</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" type="image/x-icon" href="../img\ico.png" />
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
