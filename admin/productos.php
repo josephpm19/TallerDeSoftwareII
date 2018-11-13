@@ -28,8 +28,8 @@ $producto = $stmt->fetchAll();
                 <div class="nombre-tabla">
                      <h2>Lista de Productos</h2>
                      <div class="añadir_producto">
-                         <button type="submit">Añadir Producto</button>
-                     </div>
+                        <a href="agregar_producto.php"><i class="fas fa-plus"></i> Añadir Producto</a>                     
+                    </div>
                 </div>
                 
                 <table>
