@@ -49,18 +49,15 @@ $suscriptores = $stmt->fetchAll();
                         <td><?php echo $s["nombre"] ?></td>
                         <td><?php echo $s["email"] ?></td>
                         <td style="text-align: center">            
-                            <form class="edit" action="borrar_usuario.php" method="POST">
-                                <input type="hidden" name="id" value="<?php echo $u["id"] ?>">
+                            <form class="edit" action="borrar_sus.php" method="POST">
+                                <input type="hidden" name="ids" value="<?php echo $s["id_suscriptor"] ?>">
                                 <button type="submit"><i class="fas fa-trash-alt" style="font-weight: 1000;font-size:15px;margin: auto;"></i></button>
                             </form> 
                             <form class="edit" action="editar_usuario.php" method="GET">
-                                <input type="hidden" name="id" value="<?php echo $u["id"] ?>">
+                                <input type="hidden" name="id" value="<?php echo $s["id_suscriptor"] ?>">
                                 <button type="submit"><i class="fas fa-edit" style="font-weight: 1000;font-size:15px;margin: auto;"></i></button>
                             </form>  
-                            <form class="edit" action="editar_password.php" method="GET">
-                                <input type="hidden" name="id" value="<?php echo $u["id"] ?>">
-                                <button type="submit"> <i class="fas fa-user-edit" style="font-weight: 1000;font-size:15px;margin: auto;"></i></button>
-                            </form>         
+                                    
                         </td>
                     </tr>
                     <?php } ?>

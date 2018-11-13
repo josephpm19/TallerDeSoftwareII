@@ -60,18 +60,11 @@ $contacto = $stmt->fetchAll();
                         <td><?php echo $c["mensaje"] ?></td>
 
                         <td style="text-align: center">            
-                            <form class="edit" action="borrar_usuario.php" method="POST">
-                                <input type="hidden" name="id" value="<?php echo $u["id"] ?>">
+                            <form class="edit" action="borrar_correo.php" method="POST">
+                                <input type="hidden" name="idc" value="<?php echo $c["id_contacto"] ?>">
                                 <button type="submit"><i class="fas fa-trash-alt" style="font-weight: 1000;font-size:15px;margin: auto;"></i></button>
                             </form> 
-                            <form class="edit" action="editar_usuario.php" method="GET">
-                                <input type="hidden" name="id" value="<?php echo $u["id"] ?>">
-                                <button type="submit"><i class="fas fa-edit" style="font-weight: 1000;font-size:15px;margin: auto;"></i></button>
-                            </form>  
-                            <form class="edit" action="editar_password.php" method="GET">
-                                <input type="hidden" name="id" value="<?php echo $u["id"] ?>">
-                                <button type="submit"> <i class="fas fa-user-edit" style="font-weight: 1000;font-size:15px;margin: auto;"></i></button>
-                            </form>         
+                                    
                         </td>
                     </tr>
                     <?php } ?>
