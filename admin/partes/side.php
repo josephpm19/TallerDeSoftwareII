@@ -8,7 +8,7 @@
                     </div>
                     <div class="tools">
                         <ul>
-                            <li><a href="index.php"><span><i class="fas fa-home"></i></span> Principal</a> </li>
+                            <li><a href="index.php"><i class="fas fa-home"></i>Principal</a> </li>
                             <li><a href="productos.php"><i class="fas fa-wine-bottle"></i>Productos</a></li>                 
                             <li><a href="pedidos.php"><i class="fab fa-opencart"></i> Pedidos</a></li>
                             <li><a href="clientes.php"><i class="fas fa-users"></i> Clientes</a></li>

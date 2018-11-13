@@ -26,10 +26,8 @@ $producto = $stmt->fetchAll();
                     <?php include 'partes/side.php'?>
             <div class="content">
                 <div class="nombre-tabla">
-                     <h2>Lista de Productos</h2>
-                     <div class="añadir_producto">
-                        <a href="agregar_producto.php"><i class="fas fa-plus"></i> Añadir Producto</a>                     
-                    </div>
+                     <h2>Lista de Productos</h2>                    
+                     <a id="añadir_producto" href="agregar_producto.php"><i class="fas fa-plus"></i> Añadir Producto</a>                     
                 </div>
                 
                 <table>
@@ -51,22 +49,19 @@ $producto = $stmt->fetchAll();
                     <tr>
                         <td><?php echo $p["id_producto"] ?></td>
                         <td><?php echo $p["nombre"] ?></td>
-                        <td><?php echo $p["precio"] ?></td>
+                        <td> S/<?php echo $p["precio"] ?></td>
                         <td><?php echo $p["stock"] ?></td>
                         <td><?php echo $p["categoria"] ?></td>
                         <td style="text-align: center">            
-                            <form action="borrar_usuario.php" method="POST">
-                                <input type="hidden" name="id" value="<?php echo $u["id"] ?>">
-                                <button type="submit"><i class="fas fa-trash-alt"></i></button>
+                            <form class="edit" action="borrar_producto.php" method="POST">
+                                <input type="hidden" name="id" value="<?php echo $p["id_producto"] ?>">
+                                <button type="submit"><i class="fas fa-trash-alt" style="font-weight: 1000;font-size:15px;margin: auto;"></i></button>
                             </form> 
-                            <form action="editar_usuario.php" method="GET">
-                                <input type="hidden" name="id" value="<?php echo $u["id"] ?>">
-                                <button type="submit"><i class="fas fa-edit"></i></button>
+                            <form class="edit" action="editar_producto.php" method="GET">
+                                <input type="hidden" name="id" value="<?php echo $p["id_producto"] ?>">
+                                <button type="submit"><i class="fas fa-edit" style="font-weight: 1000;font-size:15px;margin: auto;"></i></button>
                             </form>  
-                            <form action="editar_password.php" method="GET">
-                                <input type="hidden" name="id" value="<?php echo $u["id"] ?>">
-                                <button type="submit"> <i class="fas fa-user-edit"></i></button>
-                            </form>         
+                                  
                         </td>
                     </tr>
                     <?php } ?>

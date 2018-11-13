@@ -22,6 +22,18 @@ session_start();
         <div class="bloque-cuerpo">
                     <?php include 'partes/side.php'?>
             <div class="content">
+                <p>Estadísticas hasta hoy día</p>
+                <div class="cant_product">
+                        Cantidad de productos: 15
+                </div>
+                <div class="cant_pedidos">
+                        Cantidad de pedidos: 15
+                </div>
+                <div class="cant_clientes">
+                        Cantidad de clientes: 15
+                </div>
+                
+                
             </div>
         </div>
         
