@@ -14,7 +14,7 @@
     <?php include 'partes/navegacion.php' ?>
 
     <main>
-        <h1>Cont</h1>
+        <h1>Gracias</h1>
 
         <p>Estimado <b><?php echo $_COOKIE["nombre"];?></b>  gracias por enviarnos su formulario</p>
     </main>

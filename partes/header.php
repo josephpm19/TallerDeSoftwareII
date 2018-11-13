@@ -9,5 +9,8 @@
     </div>
     <div id="shopping-cart">
         <a href="#"> <i class="fa fa-shopping-basket"></i> </a>
+            <div id="carritocomp">
+                #
+            </div>
     </div>
 </div>

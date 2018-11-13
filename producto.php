@@ -1,4 +1,6 @@
 <?php
+session_start();
+
 $id=intval($_GET["id"]);
 $db = new PDO('mysql:host=localhost;dbname=pisquerito;charset=utf8', 'root', '');
 $stmt = $db->query("SELECT * FROM producto WHERE id_producto ='$id'");
@@ -44,7 +46,7 @@ $pro = $stmt->fetchObject();
                 <input class="cuadro-cant" type="number" name="cantidad" min="1" max="10">
             </div>
             <div class="btn-cart">
-                <button id="btn-carrito" type="submit"> COMPRAR AHORA</button>
+                <button id="btn-carrito" class="btn_anade" value="<?php echo $pro->id_producto?>"> COMPRAR AHORA</button>
             </div>
             <div class="contador">
                 <div class="items-count" id="progress_bar"></div> 

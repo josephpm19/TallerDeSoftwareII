@@ -3,14 +3,12 @@ body{
     
 }
 .img-title{
-    border:2px solid black;
     height: 700px;
     padding: 0;
 }
 .imagen-producto{
     width: 40%;
     height: 600px;
-    border:2px solid black;
     margin: 30px;
     float: left;
     clear: both;
@@ -23,7 +21,6 @@ body{
 .bloque-datos{
     width: 50%;
     height: 600px;
-    border:2px solid black;
     margin: 30px;
     float: right;
     border-radius: 15px;
