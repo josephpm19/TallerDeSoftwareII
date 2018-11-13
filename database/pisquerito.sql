@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Servidor: 127.0.0.1
--- Tiempo de generación: 08-11-2018 a las 19:58:49
+-- Tiempo de generación: 13-11-2018 a las 14:45:52
 -- Versión del servidor: 10.1.28-MariaDB
 -- Versión de PHP: 7.1.11
 
@@ -63,6 +63,40 @@ CREATE TABLE `cliente` (
   `telefono` varchar(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `cliente`
+--
+
+INSERT INTO `cliente` (`id_cliente`, `nombre`, `apellido`, `usuario`, `pass`, `direccion`, `ciudad`, `region`, `cod_post`, `correo`, `telefono`) VALUES
+(1, 'José Luis', 'Paquiyauri', 'joshephpm', '153426', 'av la molina', 'la molina', 'lima', '15023', 'joshephp@gmail.com', '982544098'),
+(2, 'Jorge ', 'Lopez', 'jorgelopez', '123456', 'av javier prado', 'la molina', 'lima', '15000', 'jjsldn@gmail.com', '985554488'),
+(3, 'Jorge ', 'Lopez', 'jorgelopez', '123456', 'av javier prado', 'la molina', 'lima', '15000', 'jjsldn@gmail.com', '985554488');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `contacto`
+--
+
+CREATE TABLE `contacto` (
+  `id_contacto` int(11) NOT NULL,
+  `nombre` varchar(30) NOT NULL,
+  `apellido` varchar(50) NOT NULL,
+  `email` varchar(50) NOT NULL,
+  `telefono` int(9) NOT NULL,
+  `numpedido` varchar(20) NOT NULL,
+  `motivo` varchar(20) NOT NULL,
+  `mensaje` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `contacto`
+--
+
+INSERT INTO `contacto` (`id_contacto`, `nombre`, `apellido`, `email`, `telefono`, `numpedido`, `motivo`, `mensaje`) VALUES
+(1, 'Jose Luis', 'Paquiyauri', 'joshephpm@gmail.com', 943207434, '1002', 'reclamo', 'when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, '),
+(3, 'Jose Luis', 'Paquiyauri', 'joshephpm@gmail.com', 943207434, '111025', 'reclamo', 'Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical Latin literature from 45 BC, making it over 2000 years old. ');
+
 -- --------------------------------------------------------
 
 --
@@ -72,14 +106,14 @@ CREATE TABLE `cliente` (
 CREATE TABLE `imagen` (
   `id_imagen` int(11) NOT NULL,
   `id_producto` int(11) NOT NULL,
-  `imagen` varchar(100) NOT NULL
+  `nombre_img` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `imagen`
 --
 
-INSERT INTO `imagen` (`id_imagen`, `id_producto`, `imagen`) VALUES
+INSERT INTO `imagen` (`id_imagen`, `id_producto`, `nombre_img`) VALUES
 (1, 2, 'vino1.webp');
 
 -- --------------------------------------------------------
@@ -94,6 +128,14 @@ CREATE TABLE `listaproductos` (
   `id_venta` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Volcado de datos para la tabla `listaproductos`
+--
+
+INSERT INTO `listaproductos` (`id_listaproductos`, `id_producto`, `id_venta`) VALUES
+(1, 2, 1),
+(2, 3, 1);
+
 -- --------------------------------------------------------
 
 --
@@ -105,16 +147,19 @@ CREATE TABLE `producto` (
   `nombre` varchar(1000) NOT NULL,
   `precio` double NOT NULL,
   `descrip` text NOT NULL,
-  `stock` int(11) NOT NULL
+  `stock` int(11) NOT NULL,
+  `categoria` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Volcado de datos para la tabla `producto`
 --
 
-INSERT INTO `producto` (`id_producto`, `nombre`, `precio`, `descrip`, `stock`) VALUES
-(2, 'Vino Tinto Ventisquero  750 ml', 54.99, 'Cuando pasamos por momentos de amplia felicidad en los que deseamos celebrar logros, satisfacciones, y congratularnos con ellos: la familia, así también con amigos, vecinos, etc. Para esos instantes maravillosos está el Vino Tinto Ventisquero Clásico Cabernet Sauvignon, la gran opción para unirse ese bello día.', 59),
-(3, 'Vino Tinto Las Moras Black Label 750 ml', 69.99, 'El Vino Tinto Ventisquero Clásico Cabernet Sauvignon, en boca tiene buen cuerpo y acidez equilibrada, con taninos maduros y un buen balance entre la fruta y la madera en su retrogusto. Anímate a comprarlo por la web de Wong Perú', 99);
+INSERT INTO `producto` (`id_producto`, `nombre`, `precio`, `descrip`, `stock`, `categoria`) VALUES
+(2, 'Vino Tinto Ventisquero  750 ml', 54.99, 'Cuando pasamos por momentos de amplia felicidad en los que deseamos celebrar logros, satisfacciones, y congratularnos con ellos: la familia, así también con amigos, vecinos, etc. Para esos instantes maravillosos está el Vino Tinto Ventisquero Clásico Cabernet Sauvignon, la gran opción para unirse ese bello día.', 59, 'vino tinto'),
+(3, 'Vino Tinto Las Moras Black Label 750 ml', 69.99, 'El Vino Tinto Ventisquero Clásico Cabernet Sauvignon, en boca tiene buen cuerpo y acidez equilibrada, con taninos maduros y un buen balance entre la fruta y la madera en su retrogusto. Anímate a comprarlo por la web de Wong Perú', 99, 'vino blanco'),
+(5, 'Vino Tinto Reserva Marqués de Riscal  750 ml', 79, '- Cepa: Tempranillo 90%, Graciano 7% y Mazuelo 3%\r\n\r\n- Variedad: Tinto\r\n\r\n- Bodega Marqués de Riscal\r\n\r\n- Producción en España\r\n\r\n- Año de cosecha: 2014', 87, 'vinos'),
+(12, 'Vino Tinto Reserva Marqués de Riscal  750 ml', 55.99, 'Desde unos viñedos ubicados a los pies de los Andes, Intapalka hace llegar a ti uno de los más deliciosos vinos que no puedes dejar de probar. Experimenta el expresivo aroma donde destacan notas cítricas del vino blanco Sauvignon blanc de Intipalka y vive muchos momentos totalmente únicos.', 89, 'vinos');
 
 -- --------------------------------------------------------
 
@@ -127,6 +172,21 @@ CREATE TABLE `suscriptor` (
   `nombre` varchar(200) NOT NULL,
   `email` varchar(200) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Volcado de datos para la tabla `suscriptor`
+--
+
+INSERT INTO `suscriptor` (`id_suscriptor`, `nombre`, `email`) VALUES
+(6, 'Luis', 'Perez@hmail.com'),
+(7, 'Jorge', 'Lopez@gmail.com'),
+(8, 'Victor', 'victor@hola.com'),
+(9, 'José', 'luis@usil.pe'),
+(10, 'Raquel', 'informes@usil.pe'),
+(11, 'Jorge1', 'jorge1355@gmail.com'),
+(13, 'Edison', 'joshshnm@usil.pe'),
+(14, 'Rosy', 'jsksjbcj@gmail.com'),
+(15, 'Lidia', 'jdsahdoh@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -145,6 +205,13 @@ CREATE TABLE `venta` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
+-- Volcado de datos para la tabla `venta`
+--
+
+INSERT INTO `venta` (`id_venta`, `id_cliente`, `estado`, `fecha`, `tip_envio`, `forma_pago`, `id_producto`) VALUES
+(1, 1, 'en proceso', '2018-11-12 01:00:32', 'normal', 'tarjeta de crédito', 2);
+
+--
 -- Índices para tablas volcadas
 --
 
@@ -159,6 +226,12 @@ ALTER TABLE `administrador`
 --
 ALTER TABLE `cliente`
   ADD PRIMARY KEY (`id_cliente`);
+
+--
+-- Indices de la tabla `contacto`
+--
+ALTER TABLE `contacto`
+  ADD PRIMARY KEY (`id_contacto`);
 
 --
 -- Indices de la tabla `imagen`
@@ -209,7 +282,13 @@ ALTER TABLE `administrador`
 -- AUTO_INCREMENT de la tabla `cliente`
 --
 ALTER TABLE `cliente`
-  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_cliente` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+
+--
+-- AUTO_INCREMENT de la tabla `contacto`
+--
+ALTER TABLE `contacto`
+  MODIFY `id_contacto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
 -- AUTO_INCREMENT de la tabla `imagen`
@@ -221,25 +300,25 @@ ALTER TABLE `imagen`
 -- AUTO_INCREMENT de la tabla `listaproductos`
 --
 ALTER TABLE `listaproductos`
-  MODIFY `id_listaproductos` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_listaproductos` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT de la tabla `producto`
 --
 ALTER TABLE `producto`
-  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_producto` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 
 --
 -- AUTO_INCREMENT de la tabla `suscriptor`
 --
 ALTER TABLE `suscriptor`
-  MODIFY `id_suscriptor` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_suscriptor` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT de la tabla `venta`
 --
 ALTER TABLE `venta`
-  MODIFY `id_venta` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_venta` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- Restricciones para tablas volcadas
