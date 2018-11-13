@@ -26,10 +26,13 @@ body{
     border:2px solid black;
     margin: 30px;
     float: right;
+    border-radius: 15px;
+    background: #fff;
+
 }
 .bloque-datos .titulo{
     border:2px solid black;
-    margin-top:50px;
+    margin-top:30px;
     margin-left: auto;
     margin-right: auto;
 }

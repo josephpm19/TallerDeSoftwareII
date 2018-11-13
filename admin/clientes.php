@@ -1,5 +1,8 @@
 <?php
 session_start();
+if (!isset($_SESSION["nombre"])) {
+    header('Location: ../login.php');   
+}
 $db = new PDO('mysql:host=localhost;dbname=pisquerito;charset=utf8', 'root', '');
 $stmt = $db->query("SELECT * FROM cliente");
 $clientes = $stmt->fetchAll();
@@ -38,7 +41,9 @@ $clientes = $stmt->fetchAll();
                         <th>DIRECCION</th>
                         <th>CIUDAD</th>
                         <th>REGION</th>
-                        <th>CÓDIGO POSTAL</th>
+                        <th>ZIP</th>
+                        <th>EMAIL</th>
+                        <th>TELEFONO</th>
                         <th>ACCION</th>
                     </tr>
                     <?php if (count($clientes) == 0) { ?>
@@ -49,11 +54,16 @@ $clientes = $stmt->fetchAll();
 
                     <?php foreach ($clientes as $cli) { ?>
                     <tr>
-                        <td><?php echo $cli["id_producto"] ?></td>
+                        <td><?php echo $cli["id_cliente"] ?></td>
                         <td><?php echo $cli["nombre"] ?></td>
-                        <td><?php echo $cli["precio"] ?></td>
-                        <td><?php echo $cli["stock"] ?></td>
-                        <td><?php echo $cli["categoria"] ?></td>
+                        <td><?php echo $cli["apellido"] ?></td>
+                        <td><?php echo $cli["usuario"] ?></td>
+                        <td><?php echo $cli["direccion"] ?></td>
+                        <td><?php echo $cli["ciudad"] ?></td>
+                        <td><?php echo $cli["region"] ?></td>
+                        <td><?php echo $cli["cod_post"] ?></td>
+                        <td><?php echo $cli["correo"] ?></td>
+                        <td><?php echo $cli["telefono"] ?></td>
                         <td style="text-align: center">            
                             <form class="edit" action="borrar_usuario.php" method="POST">
                                 <input type="hidden" name="id" value="<?php echo $u["id"] ?>">

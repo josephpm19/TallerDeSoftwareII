@@ -1,9 +1,9 @@
 <div id="footer">
-<div class="colum">
+<div class="colum" style="float:left">
         <img src="img\santiago.png" alt="">
     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
     </div>
-    <div class="colum">
+    <div class="colum" style="align-content:center">
         <h3>Nuestras Políticas</h3>
         <ul>
             <li> <a href="politicas-de-envio.php"> Politicas de Envio</a> </li>
@@ -14,7 +14,7 @@
 
         </ul>
     </div>
-    <div class="colum">
+    <div class="colum" style="float:right">
         <h3>Síguenos</h3>
     <ul id="redess">
             <li> <a href="#"> <i class="fab fa-facebook-square"></i></a> </li>

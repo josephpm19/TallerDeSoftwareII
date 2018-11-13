@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (!isset($_SESSION["nombre"])) {
+    header('Location: ../login.php');   
+}
+
 $db = new PDO('mysql:host=localhost;dbname=pisquerito;charset=utf8', 'root', '');
 $stmt = $db->query("SELECT * FROM producto");
 $producto = $stmt->fetchAll();
@@ -34,7 +38,7 @@ $producto = $stmt->fetchAll();
                             <input id="titulo" name="titleproducto" type="text" placeholder="Título del producto" required>
                         </div>
                         <div class="fields">
-                            <input id="precio" name="precioproducto" type="number" placeholder=" S/. " required>
+                            <input id="precio" name="precioproducto" type="text" placeholder=" S/. " required>
                         </div>
                         <div class="fields">
                             <textarea name="descript" id="descript" cols="30" rows="10" placeholder="Descripcion" required></textarea>

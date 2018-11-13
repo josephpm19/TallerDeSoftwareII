@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (!isset($_SESSION["nombre"])) {
+    header('Location: ../login.php');   
+}
+
 $id=intval($_GET["id"]);
 
 $db = new PDO('mysql:host=localhost;dbname=pisquerito;charset=utf8', 'root', '');

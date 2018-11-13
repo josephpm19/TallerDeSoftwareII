@@ -25,9 +25,9 @@ $productos = $stmt->fetchAll();
 	<?php include 'partes/navegacion.php' ?>
 	<div class="bloque-todo">
 			<h1>Catalogo</h1>
-		<div class="filtro">
+		<!--<div class="filtro">
 			<h3>Filtrar producto:</h3>
-		</div>
+		</div>-->
 		<div class="productos">
 			<?php foreach ($productos as $n) { ?>
 
@@ -38,8 +38,7 @@ $productos = $stmt->fetchAll();
         		<div class="detalles">
 						<h2><?php echo $n["nombre"] ?> <br> <span> <?php echo $n["categoria"] ?></span></h2>
 					
-            		<div class="precio"><?php echo $n["precio"] ?></div>
-					<a href="#">Comprar Ahora</a>
+            		<div class="precio">S/.<?php echo $n["precio"] ?></div>
 					
 					<form action="producto.php" method="GET">
                     <input type="hidden" name="id" value="<?php echo $n["id_producto"] ?>">

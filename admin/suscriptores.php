@@ -1,5 +1,9 @@
 <?php
 session_start();
+if (!isset($_SESSION["nombre"])) {
+    header('Location: ../login.php');   
+}
+
 $db = new PDO('mysql:host=localhost;dbname=pisquerito;charset=utf8', 'root', '');
 $stmt = $db->query("SELECT * FROM suscriptor");
 $suscriptores = $stmt->fetchAll();

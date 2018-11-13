@@ -91,15 +91,15 @@ justify-content: space-between;
 #footer{
 background-color: #4C3036;
 border:2px solid black;
-padding: 10px 30px; 
+padding: 5px 5px; 
 clear: both;
 }
 
 #footer .colum{
- width: 30%;
+ width: 32%;
  border: 2px solid black;
  display: inline-block;
- padding: 10px;
+ padding: 0px;
  margin: 7px 7px;
  height: 200px;
  overflow: hidden;
@@ -128,7 +128,6 @@ text-decoration: none;
 text-align: center;
 color: #fff;
 }
-
 
 #footer .colum #redess{
 list-style-type: none;
