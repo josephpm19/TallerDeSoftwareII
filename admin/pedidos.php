@@ -3,6 +3,12 @@ session_start();
 if (!isset($_SESSION["nombre"])) {
     header('Location: ../login.php');   
 }
+
+$db = new PDO('mysql:host=localhost;dbname=pisquerito;charset=utf8', 'root', '');
+$stmt = $db->query("SELECT * FROM venta a,cliente b WHERE a.id_cliente=b.id_cliente");
+$ped = $stmt->fetchAll();
+?>
+
 ?>
 
 <!DOCTYPE html>
@@ -32,25 +38,28 @@ if (!isset($_SESSION["nombre"])) {
                 <table>
                     <tr>
                         <th>#</th>
-                        <th>TITULO</th>
-                        <th>PRECIO</th>
-                        <th>STOCK</th>
-                        <th>CATEGORIA</th>
-                        <th>ACCION</th>
+                        <th>CLIENTE</th>
+                        <th>ESTADO</th>
+                        <th>FECHA</th>
+                        <th>T ENVIO</th>
+                        <th>FPAGO</th>
+                        <th>ACCIONES</th>
+
                     </tr>
-                    <?php if (count($producto) == 0) { ?>
+                    <?php if (count($ped) == 0) { ?>
                     <tr>
                         <td colspan="6" style="text-align: center"> No se encontraron productos</td>
                     </tr>
                     <?php } ?>
 
-                    <?php foreach ($producto as $p) { ?>
+                    <?php foreach ($ped as $pedi) { ?>
                     <tr>
-                        <td><?php echo $p["id_producto"] ?></td>
-                        <td><?php echo $p["nombre"] ?></td>
-                        <td><?php echo $p["precio"] ?></td>
-                        <td><?php echo $p["stock"] ?></td>
-                        <td><?php echo $p["categoria"] ?></td>
+                        <td><?php echo $pedi["id_producto"] ?></td>
+                        <td><?php echo $pedi["nombre"] ?></td>
+                        <td><?php echo $pedi["estado"] ?></td>
+                        <td><?php echo $pedi["fecha"] ?></td>
+                        <td><?php echo $pedi["tip_envio"] ?></td>
+                        <td><?php echo $pedi["forma_pago"] ?></td>
                         <td style="text-align: center">            
                             <form class="edit" action="borrar_usuario.php" method="POST">
                                 <input type="hidden" name="id" value="<?php echo $u["id"] ?>">

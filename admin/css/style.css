@@ -26,14 +26,10 @@ body{
     margin: auto ;
     display: block;
 }
-.todo .cabecera .buscador{
-    width: 200px;
-    display: inline-block;
-}
 
 .todo .cabecera .foto-perfil1{
     float: right;
-    width: 150px;
+    width: 120px;
     display: flex;
     height: 70px;
 }
@@ -43,8 +39,8 @@ body{
     border-radius: 100%;
 }
 .todo .cabecera .foto-perfil1 .logout{
-    border: 2px solid black;
-    width: 50px;
+    width: 120px;
+    margin-left: 0;
 }
 
 .todo .bloque-cuerpo{
