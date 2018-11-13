@@ -33,7 +33,7 @@ body{
 
 .todo .cabecera .foto-perfil1{
     float: right;
-    width: 250px;
+    width: 150px;
     display: flex;
     height: 70px;
 }
@@ -43,8 +43,10 @@ body{
     border-radius: 100%;
 }
 .todo .cabecera .foto-perfil1 .logout{
-    
+    border: 2px solid black;
+    width: 50px;
 }
+
 .todo .bloque-cuerpo{
         display: block;
         background: rgb(194, 196, 212);
@@ -75,6 +77,11 @@ body{
 }
 .todo .bloque-cuerpo .bloque-menu .perfil .nombre-perfil p{
     text-align: center;
+}
+.todo .bloque-cuerpo .bloque-menu .perfil .nombre-perfil p a{
+        text-decoration: none;
+        color: #fff;
+        font-size: 14px;
 }
 .todo .bloque-cuerpo .bloque-menu .perfil .tools{
     margin: 0px;

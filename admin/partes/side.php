@@ -4,7 +4,9 @@
                         <img src="img/6.jpg" alt="Foto Perfil">
                     </div>
                     <div class="nombre-perfil">
-                       <p>Bienvenido <span><?php echo $_SESSION["nombre"]; ?></span></p> 
+                       <p>Bienvenido <span><?php echo $_SESSION["nombre"]; ?></span>
+                        <br> <a href="../index.php"  target=”_blank”>Ver Tienda<i class="fas fa-store"></i></a> </p> 
+                    
                     </div>
                     <div class="tools">
                         <ul>
@@ -14,7 +16,6 @@
                             <li><a href="clientes.php"><i class="fas fa-users"></i> Clientes</a></li>
                             <li><a href="suscriptores.php"><i class="fas fa-mail-bulk"></i> Suscriptores</a></li>
                             <li><a href="correos.php"><i class="fas fa-envelope-open-text"></i>Correos</a></li>
-                            <li><a href="user-config.php"><i class="fas fa-cog"></i>Configuracion</a></li>
                         </ul>
                     </div>
                 </div>
