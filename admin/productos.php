@@ -26,7 +26,10 @@ $producto = $stmt->fetchAll();
                     <?php include 'partes/side.php'?>
             <div class="content">
                 <div class="nombre-tabla">
-                     <h2>Lista de Productos</h2> 
+                     <h2>Lista de Productos</h2>
+                     <div class="añadir_producto">
+                         <button type="submit">Añadir Producto</button>
+                     </div>
                 </div>
                 
                 <table>
