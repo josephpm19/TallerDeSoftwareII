@@ -1,2 +1,2 @@
 # TallerDeSoftwareII
-##integrantes
+integrantes
